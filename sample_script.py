@@ -3,10 +3,11 @@ from time import sleep
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
 # init driver
-driver = webdriver.Chrome(executable_path="C:\\GitHub\\python-selenium-automation\\chromedriver.exe")
-driver.maximize_window()
+service = Service('C:\GitHub\python-selenium-automation\chromedriver.exe')
+driver = webdriver.Chrome(service=service)
 
 # open the url
 driver.get('https://www.google.com/')
@@ -26,3 +27,4 @@ assert 'dress' in driver.current_url.lower(), f"Expected query not in {driver.cu
 print('Test Passed')
 
 driver.quit()
+
