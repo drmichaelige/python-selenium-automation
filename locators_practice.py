@@ -1,4 +1,13 @@
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
+# init driver
+service = Service('C:\GitHub\python-selenium-automation\chromedriver.exe')
+driver = webdriver.Chrome(service=service)
+
+driver.get('https://www.amazon.com/')
 
 
 # find locators practice
@@ -9,7 +18,7 @@ driver.find_element(By.ID, 'twotabsearchtextbox')
 # By Xpath, tag and attribute
 driver.find_element(By.XPATH, "//input[@placeholder='Search Amazon']")
 driver.find_element(By.XPATH, "//input[@aria-label='Search Amazon']")
-driver.find_element(By.XPATH, "//img[@alt='Gillette Intimate Trimmer, Gillette & Venus Razors & Refills']")
+driver.find_element(By.XPATH, "//img[@alt='Shop The Drop in sizes 14+']")
 
 # By Xpath, multiple attr
 driver.find_element(By.XPATH, "//span[@class='a-truncate-cut' and @aria-hidden='true']")
