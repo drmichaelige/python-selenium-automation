@@ -18,6 +18,11 @@ expected_result = driver.find_element(By.XPATH,"//div[@id='a-page']|//h1[contain
 # Check actual result
 actual_result = driver.find_element(By.XPATH,"//div[@id='a-page']|//h1[contains(text(), 'Sign in')]|//input[ @ type = 'email']")
 
+
 # confirm actual results = expected results and print test passed
-assert actual_result == expected_result
-print('Test Passed')
+assert actual_result == expected_result, f'Expected {expected_result} but got {actual_result}'
+
+# verify email field present
+assert driver.find_element(By.ID, 'ap_email').is_displayed(), 'Email field not shown'
+
+driver.quit()
