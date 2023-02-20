@@ -9,7 +9,7 @@ SEARCH_SUBMIT = (By.NAME, 'btnK')
 
 @given('Open Amazon page')
 def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+     context.driver.get('https://www.amazon.com/')
 
 
 @when('Click Cart icon')
@@ -21,6 +21,12 @@ def click_cart_icon(context):
 @then('Cart page opens')
 def cart_page_opens(context):
     context.driver.find_element(By.ID, 'sc-active-cart')
+
+
+@then('Verify the cart count is {expected_result}')
+def verify_cart_count(context, expected_result):
+    actual_result = context.find_element()
+    assert actual_result == expected_result
 
 
 @then('Verify "Your Amazon Cart is Empty" is displayed')
