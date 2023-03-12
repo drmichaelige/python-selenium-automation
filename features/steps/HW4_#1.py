@@ -5,9 +5,6 @@ BESTSELLERS_MENU = (By.CSS_SELECTOR,'#zg_header')
 BESTSELLERS_LINKS = (By.XPATH, "//*[contains(@href, '/ref=zg_bs_tab')]")
 
 
-@given('Open Amazon BestSellers page')
-def open_gamazon_bestsellers_page(context):
-    context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
 
 
 @then('Verify Bestsellers menu links present')

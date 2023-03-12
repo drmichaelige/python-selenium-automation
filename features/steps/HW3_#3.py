@@ -7,15 +7,10 @@ SEARCH_INPUT = (By.NAME, 'q')
 SEARCH_SUBMIT = (By.NAME, 'btnK')
 
 
-@given('Open Amazon page')
-def open_amazon(context):
-     context.driver.get('https://www.amazon.com/')
-
-
 @when('Click Cart icon')
 def click_cart_icon(context):
     context.driver.find_element(By.CSS_SELECTOR, '#nav-cart-text-container').click()
-    sleep(1)
+
 
 
 @then('Cart page opens')

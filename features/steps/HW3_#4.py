@@ -9,17 +9,12 @@ def input_search_word(context, text):
     context.driver.find_element(By.ID, "twotabsearchtextbox").send_keys(text)
 
 
-@when('Click on search icon')
-def click_on_search_icon(context):
-    context.driver.find_element(By.CSS_SELECTOR, '#nav-search-submit-button').click()
-
-
-@when('Click on product')
+@then('Click on product')
 def click_on_product(context):
     context.driver.find_element(By.XPATH, "//span[@class='a-price']").click()
 
 
-@when('Click add to cart')
+@then('Click add to cart')
 def click_add_to_cart(context):
     context.driver.find_element(By.CSS_SELECTOR, '#add-to-cart-button').click()
 
