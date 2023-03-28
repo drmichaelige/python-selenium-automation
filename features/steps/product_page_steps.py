@@ -6,10 +6,10 @@ CS_LINK = (By.CSS_SELECTOR,"a[href*='nav_cs_customerservice']")
 COU_PAGE = (By.CSS_SELECTOR,"a[href*='gp/help/customer/display.html?nodeId=508088&ref_=footer_cou']")
 PRIVACY_NOTICE = (By.CSS_SELECTOR,"a[href*='privacy']")
 
-@given('Open Amazon page')
-def open_amazon(context):
-     context.driver.get('https://www.amazon.com/')
-     context.driver.implicitly_wait(1)
+# @given('Open Amazon page')
+# def open_amazon(context):
+#      context.driver.get('https://www.amazon.com/')
+#      context.driver.implicitly_wait(1)
 
 
 @given('Open BestSellers page')

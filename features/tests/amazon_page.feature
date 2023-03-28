@@ -9,3 +9,4 @@ Feature: Test for product page
     Given Open Amazon page
     Given Open Conditions of Use page
 
+Featur

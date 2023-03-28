@@ -1,3 +1,5 @@
+from lib2to3.fixes.fix_input import context
+
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 
@@ -5,12 +7,13 @@ SEARCH_BOOK = (By.CSS_SELECTOR, '#nav-cart-count')
 
 
 @when('Input text {text}')
-def input_search_word(context, text):
-    context.driver.find_element(By.ID, "twotabsearchtextbox").send_keys(text)
+def input_text(context, text):
+    context.app.header.input_search(text)
 
 
 @then('Click on product')
 def click_on_product(context):
+    context.app.product.add_product()
     context.driver.find_element(By.XPATH, "//span[@class='a-price']").click()
 
 

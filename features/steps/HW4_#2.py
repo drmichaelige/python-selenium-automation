@@ -7,9 +7,9 @@ ADD_TO_CART = (By.CSS_SELECTOR, '#add-to-cart-button')
 CART_ITEMS = (By.ID, "nav-cart-count")
 
 
-@then('Click select product')
-def click_select_product(context):
-    context.driver.find_element(*SELECT_PRODUCT).click()
+# @then('Click select product')
+# def click_select_product(context):
+#     context.driver.find_element(*SELECT_PRODUCT).click()
 
 
 @then('Store the product name')
