@@ -23,6 +23,14 @@ class SearchPage(Page):
         self.click(*self.FIRST_PRODUCT)
 
 
+
+
+
+
+
+
+
+
 #     context.driver.find_element(*SEARCH_INPUT)
 #     #search.clear()
 #     # search.send_keys(search_word)
