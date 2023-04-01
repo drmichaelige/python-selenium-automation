@@ -19,6 +19,11 @@ def browser_init(context):
     context.driver.wait = WebDriverWait(context.driver, 10)
     context.app = Application(context.driver)
 
+    # options = webdriver.ChromeOptions
+    # options.add_argument('headless')
+    # context.driver = webdriver.Chrome(chrome_options=options)
+    # chroptions = webdriver.ChromeOptions()
+
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
     browser_init(context)
@@ -35,3 +40,5 @@ def after_step(context, step):
 
 def after_scenario(context, feature):
     context.driver.quit()
+
+
